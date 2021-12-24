@@ -4,10 +4,6 @@ namespace App\Model;
 
 class Produto
 {
-
-    /**
-     * Retorna um array com os campos do cadastro de Produtos
-     */
     public static function getArray()
     {
         return array(
@@ -80,9 +76,6 @@ class Produto
         return $result[0]['total'];
     }
 
-    /**
-     * Listagem de produtos com paginação
-     */
     public static function listar(int $pagina = 0, int $quantidade = 0)
     {
         $sql = "SELECT p.id, p.name, COALESCE(GROUP_CONCAT(t.name separator ', '), '') as 'tags' " . 

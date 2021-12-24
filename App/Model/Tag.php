@@ -4,9 +4,6 @@ namespace App\Model;
 
 class Tag
 {
-    /**
-     * Retorna um array com os campos do cadastro de Tags
-     */
     public static function getArray()
     {
         return array(

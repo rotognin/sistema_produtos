@@ -39,11 +39,6 @@ class TagXProduto
         return $conn->execute();
     }
 
-    /**
-     * Carregar os registros de Tags atreladas a Produtos
-     * Se passado o ID do produto, serão retornadas as tags do mesmo.
-     * Se passado o ID da tag, serão retornados os produtos com a tag atrelada.
-     */
     public static function carregar(int $proID = 0, int $tagID = 0)
     {
         $sql = 'SELECT * FROM product_tag ';
