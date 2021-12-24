@@ -1,5 +1,2 @@
-Repositório com a proposta
-https://github.com/Promobit/teste-cadastro-produtos
-
 Documentação Bootstrap
 https://getbootstrap.com/docs/4.0/getting-started/introduction/

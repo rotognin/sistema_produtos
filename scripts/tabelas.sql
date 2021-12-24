@@ -7,7 +7,7 @@ CREATE TABLE `users` (
   UNIQUE KEY `login_UNIQUE` (`login`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
-INSERT INTO `products_db`.`users`
+INSERT INTO `users`
 (`name`, `login`, `password`)
 VALUES
 ('Administrador',

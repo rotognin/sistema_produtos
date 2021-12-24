@@ -54,3 +54,9 @@ Na tag "Alimento", tanto o "Macarrão" quanto o "Arroz" estão com a relevância
 
 - Padrão MVC
 - Bootstrap 4 (importando via CDN)
+
+## Teste
+
+Esse projeto está hospedado em meu site. [Link para o projeto](https://rodrigotognin.com.br/produtos/index.php)
+Usuário: `admin`
+Senha: `123`
