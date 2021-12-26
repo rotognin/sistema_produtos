@@ -19,6 +19,28 @@
                 </div>
             </div>
         </nav>
+        <br>
+        <h3>Totais:</h3>
+        <table class="table table-striped table-hover table-sm">
+            <tbody>
+                <tr>
+                    <td><strong>Produtos</strong></td>
+                    <td><?php echo $total_produtos; ?></td>
+                </tr>
+                <tr>
+                    <td><strong>Produtos sem Tags</strong></td>
+                    <td><?php echo $produtos_sem_tags; ?></td>
+                </tr>
+                <tr>
+                    <td><strong>Tags</strong></td>
+                    <td><?php echo $total_tags; ?></td>
+                </tr>
+                <tr>
+                    <td><strong>Tags não atribuídas</strong></td>
+                    <td><?php echo $tags_sem_produtos; ?></td>
+                </tr>
+            </tbody>
+        </table>
     </div>
 </body>
 </html>

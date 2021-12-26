@@ -108,4 +108,26 @@ class TagXProduto
         
         $conn->execute();
     }
+
+    private static function totalSemAtribuicao(string $sql)
+    {
+        $conn = Conexao::getConexao()->prepare($sql);
+        $conn->execute();
+        $result = $conn->fetchAll();
+        return (int) $result[0]['total'];
+    }
+
+    public static function totalProdutosSemTags()
+    {
+        $sql = 'SELECT COUNT(p.id) as "total" FROM product p ' .
+               'WHERE p.id NOT IN (SELECT product_id FROM product_tag)';
+        return self::totalSemAtribuicao($sql);
+    }
+
+    public static function totalTagsSemProdutos()
+    {
+        $sql = 'SELECT COUNT(t.id) as "total" FROM tag t ' .
+               'WHERE t.id NOT IN (SELECT tag_id FROM product_tag)';
+        return self::totalSemAtribuicao($sql);
+    }
 }

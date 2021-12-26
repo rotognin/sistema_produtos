@@ -73,7 +73,7 @@ class Produto
         $conn = Conexao::getConexao()->prepare($sql);
         $conn->execute();
         $result = $conn->fetchAll();
-        return $result[0]['total'];
+        return (int) $result[0]['total'];
     }
 
     public static function listar(int $pagina = 0, int $quantidade = 0)

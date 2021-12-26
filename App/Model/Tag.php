@@ -71,6 +71,15 @@ class Tag
         return $conn->fetchAll();
     }
 
+    public static function total()
+    {
+        $sql = 'SELECT COUNT(name) as total FROM tag';
+        $conn = Conexao::getConexao()->prepare($sql);
+        $conn->execute();
+        $result = $conn->fetchAll();
+        return (int) $result[0]['total'];
+    }
+
     public static function relatorio()
     {
         $sql = 'SELECT t.id, t.name, ' .
