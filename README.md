@@ -20,6 +20,7 @@ Para utilizar localmente o sistema, é preciso ter um ambiente configurado da se
 - Crie uma pasta em seu computador e baixe esse repositório nela (pode-se usar `git clone` ou baixar manualmente)
 - No MySQL, crie um novo banco com o nome `products_db`
 - Após isso abra o arquivo `scripts\tabelas.sql` e execute seu conteúdo no banco de dados para criar as tabelas
+- O arquivo `scripts\dados.sql` pode ser executado, caso queira, para adicionar produtos, tags e atribuições de algumas tags aos produtos
 - Abra o arquivo `App\Model\Conexao.php` e configure o acesso ao banco ajustando as variáveis `host`, `user` e `password`
 
 Um usuário será criado para acesso ao sistema. O login é `admin` e a senha é `123`
@@ -29,6 +30,8 @@ Um usuário será criado para acesso ao sistema. O login é `admin` e a senha é
 O sistema permite cadastrar produtos e tags. Cada atribuição de tag ao produto possui um grau de relevância, sendo "Muito alta", "Alta", "Média", "Baixa" ou "Muito baixa". Essa relevância permite que, ao selecionar uma tag em específico, o sistema exiba em primeiro lugar os produtos com maior relevância para a tag atribuída.
 
 Por exemplo: ao cadastrar "Arroz" e "Lasanha", ambos poderão ter a tag "Alimento" atribuída. Porém, ao listar produtos com a tag `Alimento`, o Arroz é mais relevante do que a Lasanha. Esse grau de relevância é configurado no cadastro/alteração dos produtos.
+
+## Script de extração dos dados do relatório
 
 O script SQL executado para exibir as tags, a quantidade de produtos por tag e os produtos com aquela tag em ordem de relevância segue abaixo:
 
@@ -43,7 +46,7 @@ GROUP BY t.id
 ORDER BY qtd_produtos DESC
 ```
 
-Segue abaixo um exemplo de resultado dessa consulta:
+Segue um exemplo de resultado dessa consulta:
 
 ID | Tag | Produtos Vinculados | Produtos em ordem de relevância
 :-------: | :---------: | :-------: | :-------:
