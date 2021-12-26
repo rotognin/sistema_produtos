@@ -2,7 +2,14 @@
 
 Sistema de cadastro de produtos e vinculação de tags com atribuição de relevância de cada tag para o produto.
 
-Para utilizar o sistema, é preciso ter um ambiente configurado da seguinte forma:
+Esse projeto está hospedado em meu site. [Link para o projeto](https://rodrigotognin.com.br/produtos/index.php)
+
+Usuário: `admin`
+Senha: `123`
+
+## Instalação local
+
+Para utilizar localmente o sistema, é preciso ter um ambiente configurado da seguinte forma:
 
 - PHP 7+
 - MySQL 5.7+
@@ -54,10 +61,3 @@ Na tag "Alimento", tanto o "Macarrão" quanto o "Arroz" estão com a relevância
 
 - Padrão MVC
 - Bootstrap 4 (importando via CDN)
-
-## Teste
-
-Esse projeto está hospedado em meu site. [Link para o projeto](https://rodrigotognin.com.br/produtos/index.php)
-
-Usuário: `admin`
-Senha: `123`
